@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Provider } from "react-redux";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  RouterProvider,
+  createBrowserRouter,
+  Link,  
+} from "react-router-dom";
+import "./App.css";
+import Accordian from "./components/accordian/Accordian";
+import RandomColor from "./components/random-color/RandomColor";
+import Home from "./components/home/Home";
 
 function App() {
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/accordian",
+  //     element: <Accordian />,
+  //   },
+  //   {
+  //     path: "/randomColor",
+  //     element: <RandomColor />,
+  //   },
+  //   {
+    
+  //   },
+  // ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">            
+        <main className="nav">
+        <BrowserRouter>
+          <nav>
+            <ul>
+            <li>                
+                <Link to="/home">Home </Link>
+              </li>
+              <li>                
+                <Link to="/accordian">Accordian </Link>
+              </li>
+              <li>
+                <Link to="/randomcolor">Randomcolor </Link>
+              </li>              
+            </ul>
+          </nav>
+         
+          
+        <Routes >
+        <Route path="/home" element={<Home />}  />
+        <Route path="/accordian" element={<Accordian />} />
+        <Route path="/randomcolor" element={<RandomColor />} />      
+        
+        </Routes>
+        </BrowserRouter>
+        </main>
     </div>
   );
 }
