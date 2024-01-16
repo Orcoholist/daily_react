@@ -11,6 +11,7 @@ import "./App.css";
 import Accordian from "./components/accordian/Accordian";
 import RandomColor from "./components/random-color/RandomColor";
 import Home from "./components/home/Home";
+import StarRating from "./components/star-rating/StarRating";
 
 function App() {
   // const router = createBrowserRouter([
@@ -40,7 +41,10 @@ function App() {
               </li>
               <li>
                 <Link to="/randomcolor">Randomcolor </Link>
-              </li>              
+              </li>   
+              <li>
+                <Link to="/starrating">StarRating </Link>
+              </li>            
             </ul>
           </nav>
          
@@ -49,6 +53,7 @@ function App() {
         <Route path="/home" element={<Home />}  />
         <Route path="/accordian" element={<Accordian />} />
         <Route path="/randomcolor" element={<RandomColor />} />      
+        <Route path="/starrating" element={<StarRating />} />      
         
         </Routes>
         </BrowserRouter>
