@@ -12,6 +12,7 @@ import Accordian from "./components/accordian/Accordian";
 import RandomColor from "./components/random-color/RandomColor";
 import Home from "./components/home/Home";
 import StarRating from "./components/star-rating/StarRating";
+import ImageSlider from "./components/image-slider/ImageSlider";
 
 function App() {
   // const router = createBrowserRouter([
@@ -27,6 +28,7 @@ function App() {
     
   //   },
   // ]);
+  
   return (
     <div className="app">            
         <main className="nav">
@@ -44,7 +46,10 @@ function App() {
               </li>   
               <li>
                 <Link to="/starrating">StarRating </Link>
-              </li>            
+              </li>    
+              <li>
+                <Link to="/imageslider">ImageSlider </Link>
+              </li>          
             </ul>
           </nav>
          
@@ -54,6 +59,9 @@ function App() {
         <Route path="/accordian" element={<Accordian />} />
         <Route path="/randomcolor" element={<RandomColor />} />      
         <Route path="/starrating" element={<StarRating />} />      
+        <Route path="/imageslider" element={<ImageSlider url={"https://picsum.photos/v2/list"}
+        page={"1"}
+        limit={"10"} />} />      
         
         </Routes>
         </BrowserRouter>
