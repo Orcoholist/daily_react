@@ -13,6 +13,7 @@ import RandomColor from "./components/random-color/RandomColor";
 import Home from "./components/home/Home";
 import StarRating from "./components/star-rating/StarRating";
 import ImageSlider from "./components/image-slider/ImageSlider";
+import LoadMoreData from "./components/load-more-data/LoadMoreData";
 
 function App() {
   // const router = createBrowserRouter([
@@ -49,7 +50,10 @@ function App() {
               </li>    
               <li>
                 <Link to="/imageslider">ImageSlider </Link>
-              </li>          
+              </li>      
+              <li>
+                <Link to="/loadmoredata">LoadMoreData </Link>
+              </li>       
             </ul>
           </nav>
          
@@ -62,7 +66,7 @@ function App() {
         <Route path="/imageslider" element={<ImageSlider url={"https://picsum.photos/v2/list"}
         page={"1"}
         limit={"10"} />} />      
-        
+        <Route path ="loadmoredata" element={<LoadMoreData />} />
         </Routes>
         </BrowserRouter>
         </main>

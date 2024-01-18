@@ -11,10 +11,6 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   async function fetchImages(getUrl) {
     try {
       setLoading(true);
-    //  const json = fetch("https://jsonplaceholder.typicode.com/photos/1")
-    //     .then((response) => response.json())
-    //     .then((json) => console.log(json));
-    //     console.log(json)
         const myUrl = "http://jsonplaceholder.typicode.com/photos?_start=0&_limit=5"
       const response = await fetch(`${myUrl}`);
       const data = await response.json();
@@ -29,11 +25,11 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
     }
   }
 
-  function handlePrevious() {
+  function handlerPrevious() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
   }
 
-  function handleNext() {
+  function handlerNext() {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
 
@@ -54,7 +50,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   return (
     <div className="container">
       <BsArrowLeftCircleFill
-        onClick={handlePrevious}
+        onClick={handlerPrevious}
         className="arrow arrow-left"
       />
       {images && images.length
@@ -72,7 +68,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
           ))
         : null}
       <BsArrowRightCircleFill
-        onClick={handleNext}
+        onClick={handlerNext}
         className="arrow arrow-right"
       />
       <span className="circle-indicators">
