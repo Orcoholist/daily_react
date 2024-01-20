@@ -16,6 +16,7 @@ import ImageSlider from "./components/image-slider/ImageSlider";
 import LoadMoreData from "./components/load-more-data/LoadMoreData";
 import TreeView from "./components/tree-view/TreeView";
 import menus from "./components/tree-view/data";
+import QrCodeGen from "./components/qr-code-gen/QrCodeGen";
 
 function App() {
   // const router = createBrowserRouter([
@@ -58,7 +59,10 @@ function App() {
               </li>    
               <li>
                 <Link to="/treeview">TreeView </Link>
-              </li>    
+              </li>  
+              <li>
+                <Link to="/qrcodegen">QrCodeGen </Link>
+              </li>   
             </ul>
           </nav>
          
@@ -73,8 +77,10 @@ function App() {
         limit={"10"} />} />      
         <Route path ="loadmoredata" element={<LoadMoreData />} />
         <Route path ="treeview" element={<TreeView menus={menus} />} />
+        <Route path ="qrcodegen" element={<QrCodeGen/> } />
         </Routes>
         </BrowserRouter>
+        
         </main>
     </div>
   );

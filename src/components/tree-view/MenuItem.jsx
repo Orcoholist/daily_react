@@ -5,14 +5,10 @@ import {FaMinus, FaPlus} from 'react-icons/fa'
 export default function MenuItem({ item }) {
   const [displayCurrentChildren, setDisplayCurrentChildren] = useState({});
 
-  function handleToggleChildren(getCurrentlabel) {
-   
-    setDisplayCurrentChildren({
-      ...displayCurrentChildren,
-      [getCurrentlabel]: !displayCurrentChildren[getCurrentlabel],
+  function handleToggleChildren(getCurrentlabel) {   
+    setDisplayCurrentChildren({...displayCurrentChildren, [getCurrentlabel]: !displayCurrentChildren[getCurrentlabel],
     });
   }
-
 
 
   return (
