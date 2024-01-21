@@ -3,8 +3,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  RouterProvider,
-  createBrowserRouter,
   Link,  
 } from "react-router-dom";
 import "./App.css";
@@ -17,6 +15,7 @@ import LoadMoreData from "./components/load-more-data/LoadMoreData";
 import TreeView from "./components/tree-view/TreeView";
 import menus from "./components/tree-view/data";
 import QrCodeGen from "./components/qr-code-gen/QrCodeGen";
+import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 
 function App() {
   // const router = createBrowserRouter([
@@ -63,6 +62,9 @@ function App() {
               <li>
                 <Link to="/qrcodegen">QrCodeGen </Link>
               </li>   
+              <li>
+                <Link to="/lightdarkmode">LightDarkMode </Link>
+              </li>   
             </ul>
           </nav>
          
@@ -78,6 +80,8 @@ function App() {
         <Route path ="loadmoredata" element={<LoadMoreData />} />
         <Route path ="treeview" element={<TreeView menus={menus} />} />
         <Route path ="qrcodegen" element={<QrCodeGen/> } />
+        <Route path ="lightdarkmode" element={<LightDarkMode/> } />
+
         </Routes>
         </BrowserRouter>
         
