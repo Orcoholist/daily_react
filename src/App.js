@@ -17,6 +17,7 @@ import menus from "./components/tree-view/data";
 import QrCodeGen from "./components/qr-code-gen/QrCodeGen";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
+import CustomTabsTest from "./components/custom-tabs/CustomTabsTest";
 
 function App() {
   // const router = createBrowserRouter([
@@ -69,6 +70,9 @@ function App() {
               <li>
                 <Link to="/scrollindicator">ScrollIndicator </Link>
               </li> 
+              <li>
+                <Link to="/customtabs">CustomTabs </Link>
+              </li> 
             </ul>
           </nav>
          
@@ -86,6 +90,7 @@ function App() {
         <Route path ="qrcodegen" element={<QrCodeGen/> } />
         <Route path ="lightdarkmode" element={<LightDarkMode/> } />
         <Route path ="scrollindicator" element={<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> } />
+        <Route path ="customtabs" element={<CustomTabsTest/> } />
 
         </Routes>
         </BrowserRouter>
