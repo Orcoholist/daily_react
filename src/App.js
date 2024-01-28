@@ -3,7 +3,8 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  Link,  
+  Link,
+  createBrowserRouter,  
 } from "react-router-dom";
 import "./App.css";
 import Accordian from "./components/accordian/Accordian";
@@ -18,6 +19,7 @@ import QrCodeGen from "./components/qr-code-gen/QrCodeGen";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import CustomTabsTest from "./components/custom-tabs/CustomTabsTest";
+import ModalTest from "./components/modal-popup/ModalTest";
 
 function App() {
   // const router = createBrowserRouter([
@@ -72,7 +74,11 @@ function App() {
               </li> 
               <li>
                 <Link to="/customtabs">CustomTabs </Link>
-              </li> 
+              </li>  
+              <li>
+                <Link to="/modal">Modal </Link>
+              </li>                
+             
             </ul>
           </nav>
          
@@ -91,6 +97,7 @@ function App() {
         <Route path ="lightdarkmode" element={<LightDarkMode/> } />
         <Route path ="scrollindicator" element={<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> } />
         <Route path ="customtabs" element={<CustomTabsTest/> } />
+        <Route path ="modal" element={<ModalTest/> } />
 
         </Routes>
         </BrowserRouter>
