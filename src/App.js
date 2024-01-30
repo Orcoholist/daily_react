@@ -20,6 +20,7 @@ import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import CustomTabsTest from "./components/custom-tabs/CustomTabsTest";
 import ModalTest from "./components/modal-popup/ModalTest";
+import GithubProfileFinder from "./components/github-profile-finder/GithubProfileFinder";
 
 function App() {
   // const router = createBrowserRouter([
@@ -77,7 +78,10 @@ function App() {
               </li>  
               <li>
                 <Link to="/modal">Modal </Link>
-              </li>                
+              </li>    
+              <li>
+                <Link to="/githubprofilefinder">GithubProfileFinder </Link>
+              </li>               
              
             </ul>
           </nav>
@@ -98,6 +102,7 @@ function App() {
         <Route path ="scrollindicator" element={<ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> } />
         <Route path ="customtabs" element={<CustomTabsTest/> } />
         <Route path ="modal" element={<ModalTest/> } />
+        <Route path ="githubprofilefinder" element={<GithubProfileFinder/> } />
 
         </Routes>
         </BrowserRouter>
