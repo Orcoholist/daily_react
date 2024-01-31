@@ -1,0 +1,14 @@
+.search-autocomplete-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    max-height: 20px;
+}
+
+.suggestions{   
+    margin-top: 50px;
+    margin-left: -150px;
+}
+.suggestions ul{
+    list-style:  georgian;
+}

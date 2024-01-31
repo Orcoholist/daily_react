@@ -21,6 +21,7 @@ import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import CustomTabsTest from "./components/custom-tabs/CustomTabsTest";
 import ModalTest from "./components/modal-popup/ModalTest";
 import GithubProfileFinder from "./components/github-profile-finder/GithubProfileFinder";
+import SearchAutoComplete from "./components/search-auto-complite/SearchAutoComplete";
 
 function App() {
   // const router = createBrowserRouter([
@@ -81,7 +82,10 @@ function App() {
               </li>    
               <li>
                 <Link to="/githubprofilefinder">GithubProfileFinder </Link>
-              </li>               
+              </li>  
+              <li>
+                <Link to="/searchautocomplete">SearchAutoComplete </Link>
+              </li>              
              
             </ul>
           </nav>
@@ -103,6 +107,7 @@ function App() {
         <Route path ="customtabs" element={<CustomTabsTest/> } />
         <Route path ="modal" element={<ModalTest/> } />
         <Route path ="githubprofilefinder" element={<GithubProfileFinder/> } />
+        <Route path ="searchautocomplete" element={<SearchAutoComplete/> } />
 
         </Routes>
         </BrowserRouter>
