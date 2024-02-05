@@ -23,6 +23,7 @@ import ModalTest from "./components/modal-popup/ModalTest";
 import GithubProfileFinder from "./components/github-profile-finder/GithubProfileFinder";
 import SearchAutoComplete from "./components/search-auto-complite/SearchAutoComplete";
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
+import FeatureFlags from "./components/feature-flag/context/FeatureFlags";
 
 function App() {
   // const router = createBrowserRouter([
@@ -89,7 +90,10 @@ function App() {
               </li>   
               <li>
                 <Link to="/tictactoe">TicTacToe </Link>
-              </li>          
+              </li>  
+              <li>
+                <Link to="/featureflags">FeatureFlags </Link>
+              </li>         
              
             </ul>
           </nav>
@@ -113,10 +117,9 @@ function App() {
         <Route path ="githubprofilefinder" element={<GithubProfileFinder/> } />
         <Route path ="searchautocomplete" element={<SearchAutoComplete/> } />
         <Route path ="tictactoe" element={<TicTacToe/> } />
-
+        <Route path ="featureflags" element={<FeatureFlags/> } />
         </Routes>
-        </BrowserRouter>
-        
+        </BrowserRouter>        
         </main>
     </div>
   );
