@@ -24,6 +24,7 @@ import GithubProfileFinder from "./components/github-profile-finder/GithubProfil
 import SearchAutoComplete from "./components/search-auto-complite/SearchAutoComplete";
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlags from "./components/feature-flag/context/FeatureFlags";
+import UseOnclickOutsideTest from "./components/useOutsideClick/UseOnclickOutsideTest";
 
 function App() {
   // const router = createBrowserRouter([
@@ -42,10 +43,10 @@ function App() {
   
   return (
     <div className="app">            
-        <main className="nav">
+        <main>
         <BrowserRouter>
-          <nav>
-            <ul>
+          <nav className="nav">
+            <ul className="nav__list">
             <li>                
                 <Link to="/home">Home </Link>
               </li>
@@ -93,8 +94,10 @@ function App() {
               </li>  
               <li>
                 <Link to="/featureflags">FeatureFlags </Link>
-              </li>         
-             
+              </li>       
+              <li>
+                <Link to="/useonclickoutsidetest">UseOnclickOutsideTest </Link>
+              </li>                
             </ul>
           </nav>
          
@@ -118,6 +121,7 @@ function App() {
         <Route path ="searchautocomplete" element={<SearchAutoComplete/> } />
         <Route path ="tictactoe" element={<TicTacToe/> } />
         <Route path ="featureflags" element={<FeatureFlags/> } />
+        <Route path ="UseOnclickOutsideTest" element={<UseOnclickOutsideTest  /> } />
         </Routes>
         </BrowserRouter>        
         </main>

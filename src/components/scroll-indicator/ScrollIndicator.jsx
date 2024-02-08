@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -55,7 +56,7 @@ export default function ScrollIndicator({ url }) {
   }
 
   if (loading) {
-      return <div>loading...</div>;
+    return <div>loading...</div>;
   }
 
   return (
@@ -68,6 +69,9 @@ export default function ScrollIndicator({ url }) {
             style={{ width: `${scrollProcentage}%` }}
           ></div>
         </div>
+        <button>
+          <Link to="/home">Home</Link>
+        </button>
       </div>
       <div className="data-container">
         {data && data.length > 0
