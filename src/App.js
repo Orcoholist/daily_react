@@ -25,6 +25,7 @@ import SearchAutoComplete from "./components/search-auto-complite/SearchAutoComp
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlags from "./components/feature-flag/context/FeatureFlags";
 import UseOnclickOutsideTest from "./components/useOutsideClick/UseOnclickOutsideTest";
+import UseWindowResizeTest from "./components/use-window-resize/UseWindowResizeTest";
 
 function App() {
   // const router = createBrowserRouter([
@@ -97,6 +98,9 @@ function App() {
               </li>       
               <li>
                 <Link to="/useonclickoutsidetest">UseOnclickOutsideTest </Link>
+              </li>  
+              <li>
+                <Link to="/UseWindowResizeTest">UseWindowResizeTest </Link>
               </li>                
             </ul>
           </nav>
@@ -122,6 +126,7 @@ function App() {
         <Route path ="tictactoe" element={<TicTacToe/> } />
         <Route path ="featureflags" element={<FeatureFlags/> } />
         <Route path ="UseOnclickOutsideTest" element={<UseOnclickOutsideTest  /> } />
+        <Route path ="UseWindowResizeTest" element={<UseWindowResizeTest  /> } />
         </Routes>
         </BrowserRouter>        
         </main>
