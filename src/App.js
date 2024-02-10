@@ -26,6 +26,7 @@ import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlags from "./components/feature-flag/context/FeatureFlags";
 import UseOnclickOutsideTest from "./components/useOutsideClick/UseOnclickOutsideTest";
 import UseWindowResizeTest from "./components/use-window-resize/UseWindowResizeTest";
+import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom/ScrollToTopAndBottom";
 
 function App() {
   // const router = createBrowserRouter([
@@ -101,6 +102,9 @@ function App() {
               </li>  
               <li>
                 <Link to="/UseWindowResizeTest">UseWindowResizeTest </Link>
+              </li>  
+              <li>
+                <Link to="/ScrollToTopAndBottom">ScrollToTopAndBottom </Link>
               </li>                
             </ul>
           </nav>
@@ -127,6 +131,7 @@ function App() {
         <Route path ="featureflags" element={<FeatureFlags/> } />
         <Route path ="UseOnclickOutsideTest" element={<UseOnclickOutsideTest  /> } />
         <Route path ="UseWindowResizeTest" element={<UseWindowResizeTest  /> } />
+        <Route path ="ScrollToTopAndBottom" element={<ScrollToTopAndBottom /> } />
         </Routes>
         </BrowserRouter>        
         </main>
