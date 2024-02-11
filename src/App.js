@@ -27,6 +27,7 @@ import FeatureFlags from "./components/feature-flag/context/FeatureFlags";
 import UseOnclickOutsideTest from "./components/useOutsideClick/UseOnclickOutsideTest";
 import UseWindowResizeTest from "./components/use-window-resize/UseWindowResizeTest";
 import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom/ScrollToTopAndBottom";
+import ScrollToSection from "./components/scroll-to-top-and-bottom/ScrollToSection";
 
 function App() {
   // const router = createBrowserRouter([
@@ -105,7 +106,10 @@ function App() {
               </li>  
               <li>
                 <Link to="/ScrollToTopAndBottom">ScrollToTopAndBottom </Link>
-              </li>                
+              </li>    
+              <li>
+                <Link to="/ScrollToSection">ScrollToSection </Link>
+              </li>              
             </ul>
           </nav>
          
@@ -132,6 +136,7 @@ function App() {
         <Route path ="UseOnclickOutsideTest" element={<UseOnclickOutsideTest  /> } />
         <Route path ="UseWindowResizeTest" element={<UseWindowResizeTest  /> } />
         <Route path ="ScrollToTopAndBottom" element={<ScrollToTopAndBottom /> } />
+        <Route path ="ScrollToSection" element={<ScrollToSection /> } />
         </Routes>
         </BrowserRouter>        
         </main>
